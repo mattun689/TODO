@@ -41,14 +41,14 @@ def add():
     if todo:
         db.session.add(new_todo)
         db.session.commit()
-        #todos.append(todo)
-
-    return redirect("/")
-@app.route('/delete/<int:index>')
-def delete(index):
-    if 0<= index<len(todos):
-        todos.pop(index)
-    return redirect("/")
+        return redirect("/")
+@app.route('/delete/<int:id>')
+def delete(id):
+    todo = Todos.query.get_or_404(id)
+    if todo:
+        db.session.delete(todo)
+        db.session.commit()
+        return redirect("/")
 
 if __name__=='__main__':
     app.run(debug=True)
