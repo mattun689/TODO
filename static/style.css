@@ -1,0 +1,10 @@
+body{
+    background-color: #fff;
+    font-family:"Noto Serif CJK JP",serif;
+    /*font-family:"Noto Sans CJK JP",sans-serif;*/
+    font-size: 20px;
+    font-weight: 300;
+}
+h1{
+    color: #000;/*文字色*/
+}
